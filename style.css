@@ -106,6 +106,7 @@ select {
 .upper-details {
   display: flex;
   justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .upper-right,
@@ -118,6 +119,9 @@ select {
 }
 .upper-left {
   align-items: flex-start;
+}
+.upper-right {
+  min-width: 30%;
 }
 .upper-right img {
   margin-right: -10px;
@@ -184,6 +188,7 @@ select {
   justify-content: center;
   align-items: center;
   gap: 1.3rem;
+  text-align: center;
   /* display: none; */
 }
 
@@ -249,4 +254,57 @@ select {
 .form-container-search input:focus {
   box-shadow: rgba(0, 0, 0, 0.53) 0px 3px 8px;
   outline: none;
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    width: 90%;
+    padding: 2.2rem 2rem;
+  }
+  .wrapper h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .wrapper .tab {
+    gap: 0.2rem;
+    font-size: 1.3rem;
+  }
+  .tab .current-tab {
+    padding: 0.4rem 0.2rem;
+  }
+  .grant-location-container {
+    margin-top: 3rem;
+    gap: 1rem;
+  }
+  .form-container {
+    margin-top: 3rem;
+    overflow: hidden;
+  }
+  .form-container select {
+    font-size: 0.7rem;
+    padding: 0.4em 3em 0.4em 0.5em;
+  }
+  .loading-container,
+  .user-info-container {
+    margin-top: 3rem;
+  }
+  .user-info-container {
+    padding: 1.7rem 0.2rem;
+    font-size: 1.7rem;
+    overflow: hidden;
+  }
+  .hourly {
+    gap: 0.5rem;
+    font-size: 1.3rem;
+  }
+  .hourly div img {
+    width: 45px;
+    height: 45px;
+  }
+  .hourly div div {
+    width: max-content;
+  }
+  .form-container-search {
+    margin-top: 3rem;
+  }
 }
