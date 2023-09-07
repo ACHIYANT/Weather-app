@@ -401,7 +401,7 @@ grantAccessBtn.addEventListener("click", () => handleCoordinates());
 async function fetchLocationCodes({ lat, long }) {
   loadingScreen.classList.add("active");
   try {
-    let url = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${key}&q=${lat}%2C${long}&details=true`;
+    let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${key}&q=${lat}%2C${long}&details=true`;
     const res = await fetch(url);
     const locCode = await res.json();
 
@@ -562,7 +562,7 @@ function handleSubmit(e) {
 }
 async function fetchLocationOnSearch(value) {
   loadingScreen.classList.add("active");
-  let url = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${key}&q=${value}&details=true`;
+  let url = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${key}&q=${value}&details=true`;
   try {
     let res = await fetch(url);
     let data = await res.json();
