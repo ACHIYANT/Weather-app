@@ -612,7 +612,7 @@ function getWeather(locationCode, city, state, country) {
 
 // ? Function to fetch the one day forecast from api.
 async function fetchWeatherInfo(value) {
-  let url = `http://dataservice.accuweather.com/currentconditions/v1/${value}?apikey=${key}&details=true`;
+  let url = `https://dataservice.accuweather.com/currentconditions/v1/${value}?apikey=${key}&details=true`;
   console.log(url);
   try {
     const res = await fetch(url);
@@ -627,7 +627,7 @@ async function fetchWeatherInfo(value) {
   }
 }
 async function fetchHourlyWeatherInfo(value) {
-  let url = `http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${value}?apikey=${key}&details=true&metric=true`;
+  let url = `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${value}?apikey=${key}&details=true&metric=true`;
   console.log(url);
   try {
     const res = await fetch(url);
