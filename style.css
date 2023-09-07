@@ -295,7 +295,7 @@ select {
   }
   .hourly {
     gap: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .hourly div img {
     width: 45px;
