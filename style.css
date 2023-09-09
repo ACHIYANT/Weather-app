@@ -313,55 +313,19 @@ select {
 }
 
 @media (max-width: 390px) {
-  .wrapper {
-    width: 90%;
-    padding: 2.2rem 2rem;
-  }
-  .wrapper h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  /* changed */
   .wrapper .tab {
     gap: 0.2rem;
     font-size: 1rem;
   }
-  .tab .current-tab {
-    padding: 0.4rem 0.2rem;
-  }
-  .grant-location-container {
-    margin-top: 3rem;
-    gap: 1rem;
-  }
-  .form-container {
-    margin-top: 3rem;
-    overflow: hidden;
-  }
-  .form-container select {
-    font-size: 0.7rem;
-    padding: 0.4em 3em 0.4em 0.5em;
-  }
-  .loading-container,
-  .user-info-container {
-    margin-top: 3rem;
-  }
-  .user-info-container {
-    padding: 1.7rem 0.2rem;
-    font-size: 1.7rem;
-    overflow: hidden;
-  }
+
   .hourly {
-    gap: 0.5rem;
-    font-size: 1.1rem;
+    gap: 0.3rem;
+    font-size: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
   .hourly div img {
     width: 45px;
     height: 45px;
-  }
-  .hourly div div {
-    width: max-content;
-  }
-  .form-container-search {
-    margin-top: 3rem;
   }
 }
