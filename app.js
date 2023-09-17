@@ -437,7 +437,7 @@ async function fetchLocationCodes({ lat, long }) {
 // ? Function to get the location saved in sessionStorage.
 function getFromSessionStorage() {
   grantAccess.classList.add("active");
-  let locationCoordinates = sessionStorage.getItem("user-coordinates");
+  let locationCoordinates = localStorage.getItem("user-coordinates");
 
   if (!locationCoordinates) {
     // loadingScreen.classList.remove("active");
@@ -460,7 +460,7 @@ function showPosition(pos) {
     lat: pos.coords.latitude,
     long: pos.coords.longitude,
   };
-  sessionStorage.setItem("user-coordinates", JSON.stringify(userCordinates));
+  localStorage.setItem("user-coordinates", JSON.stringify(userCordinates));
   getFromSessionStorage();
 }
 
