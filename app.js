@@ -449,12 +449,12 @@ function getFromSessionStorage() {
 }
 
 function handleCoordinates() {
-  console.log('clicked');
+
   if (navigator.geolocation) {
-    console.log('Supported');
+
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    console.log('Not supported');
+
     alert("Geolocation is not supported by this browser.");
   }
 }
@@ -463,7 +463,6 @@ function showPosition(pos) {
     lat: pos.coords.latitude,
     long: pos.coords.longitude,
   };
-  console.log(pos);
   localStorage.setItem("user-coordinates", JSON.stringify(userCordinates));
   getFromSessionStorage();
 }
