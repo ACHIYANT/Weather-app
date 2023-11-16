@@ -451,8 +451,10 @@ function getFromSessionStorage() {
 function handleCoordinates() {
   console.log('clicked');
   if (navigator.geolocation) {
+    console.log('Supported);
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
+    console.log('Not supported);
     alert("Geolocation is not supported by this browser.");
   }
 }
