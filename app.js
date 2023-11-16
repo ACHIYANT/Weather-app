@@ -449,6 +449,7 @@ function getFromSessionStorage() {
 }
 
 function handleCoordinates() {
+  console.log('clicked');
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
@@ -460,6 +461,7 @@ function showPosition(pos) {
     lat: pos.coords.latitude,
     long: pos.coords.longitude,
   };
+  console.log(userCordinates);
   localStorage.setItem("user-coordinates", JSON.stringify(userCordinates));
   getFromSessionStorage();
 }
